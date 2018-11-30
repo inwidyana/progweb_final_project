@@ -20,18 +20,18 @@
           <li class="nav-item active">
             <a class="nav-link text-uppercase" href="/">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link text-uppercase" href="#">About</a>
+          <li class="nav-item active">
+            <a class="nav-link text-uppercase" href="/search/">Search</a>
           </li>
         </ul>
           <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
                   {% if user.is_authenticated %}
-                      <a href="logout/" class="btn btn-outline-light btn-rounded text-white text-uppercase d-none d-md-block">LOGOUT</a>
-                      <a href="logout/" class="nav-link text-uppercase d-md-none">Logout</a>
+                      <a href="/logout/" class="btn btn-outline-light btn-rounded text-white text-uppercase d-none d-md-block">LOGOUT</a>
+                      <a href="/logout/" class="nav-link text-uppercase d-md-none">Logout</a>
                   {% else %}
-                      <a href="login/" class="btn btn-outline-light btn-rounded text-white text-uppercase d-none d-md-block">Login</a>
-                      <a href="login/" class="nav-link text-uppercase d-md-none">Login</a>
+                      <a href="/login/" class="btn btn-outline-light btn-rounded text-white text-uppercase d-none d-md-block">Login</a>
+                      <a href="/login/" class="nav-link text-uppercase d-md-none">Login</a>
                   {% endif %}
               </li>
           </ul>

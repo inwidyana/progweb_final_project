@@ -35,10 +35,8 @@
                  <div class="tab-pane fade mt-3 {% if register %}show active{% endif %}" id="register" role="tabpanel" aria-labelledby="register-tab">
                     <form method="POST" action="/register/" class="row ml-4 mr-4 justify-content-center">
                         {% csrf_token %}
-                        <input type="text" placeholder="First Name" class="form-control mt-2" name="fname" required>
-                        {{ form.fname.errors }}
-                        <input type="text" placeholder="Last Name" class="form-control mt-2" name="lname" required>
-                        {{ form.lname.errors }}
+                        <input type="text" placeholder="Full Name" class="form-control mt-2" name="name" required>
+                        {{ form.name }}
                         <input type="email" placeholder="Email" class="form-control mt-2" name="username" required>
                         {{ form.username.errors }}
                         <input type="password" placeholder="Password" class="form-control mt-3" name="password" required>

@@ -21,9 +21,11 @@ from book_app.views.RegisterView import RegisterView
 from book_app.views.LogoutView import LogoutView
 from book_app.views.HomeView import HomeView
 from book_app.views.SearchView import SearchView
-from book_app.views.SearchAPI import SearchAPI
 from book_app.views.BookView import BookView
 from book_app.views.IndexView import IndexView
+
+from book_app.views.SearchAPI import SearchAPI
+from book_app.views.WeatherAPI import WeatherAPI
 
 from django.conf.urls.static import static
 from django.conf import settings
@@ -41,5 +43,6 @@ urlpatterns = [
     path('search/', SearchView.as_view(), name='search'),
 
     path('search/book/', SearchAPI.as_view(), name='search'),
+    path('weather/get/', WeatherAPI.as_view(), name='weather'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

@@ -117,3 +117,12 @@
 .input-rounded {
     border-radius: 45px;
 }
+
+.input-med {
+    height: 60px;
+    width: auto;
+}
+
+.bg-invisible {
+    background: transparent;
+}
