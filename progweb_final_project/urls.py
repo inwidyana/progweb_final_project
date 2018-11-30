@@ -14,15 +14,17 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.shortcuts import render
-from django.urls import path, include
+from django.urls import path
+
 from book_app.views.LoginView import LoginView
 from book_app.views.RegisterView import RegisterView
 from book_app.views.LogoutView import LogoutView
 from book_app.views.HomeView import HomeView
 from book_app.views.SearchView import SearchView
+from book_app.views.SearchAPI import SearchAPI
 from book_app.views.BookView import BookView
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from book_app.views.IndexView import IndexView
+
 from django.conf.urls.static import static
 from django.conf import settings
 
@@ -34,7 +36,10 @@ urlpatterns = [
     path('register/', RegisterView.as_view(), name='register'),
     path('logout/', LogoutView.as_view(), name='logout'),
     path('', HomeView.as_view(), name='home'),
-    path('search/', SearchView.as_view(), name='search'),
     path('book/', BookView.as_view(), name='book'),
+    path('home/', IndexView.as_view(), name='index'),
+    path('search/', SearchView.as_view(), name='search'),
+
+    path('search/book/', SearchAPI.as_view(), name='search'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

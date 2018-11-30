@@ -94,3 +94,19 @@
     padding-right: 39px;
     border-radius: 30px;
 }
+
+.btn-soft-edges {
+    padding-left: 39px;
+    padding-right: 39px;
+    border-radius: 10px;
+}
+
+.bg-dark {
+    background: black!important;
+    box-shadow: 0 1px 20px 5px white;
+}
+
+.bg-lamp {
+    background: url('bg lights.png');
+    background-size: cover;
+}

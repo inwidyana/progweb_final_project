@@ -10,10 +10,11 @@ from ..forms.LoginForm import LoginForm
 class LoginView(View):
     form = LoginForm()
     template = 'auth/login.html'
+    redirect_after_successful_login = '/home/'
 
     def get(self, request):
         if request.user.is_authenticated:
-            return HttpResponseRedirect('/')
+            return HttpResponseRedirect(self.redirect_after_successful_login)
         return render(request, self.template, {'form': self.form})
 
     def post(self, request):
@@ -23,6 +24,6 @@ class LoginView(View):
             user = authenticate(request, username=form.cleaned_data.get('username'), password=form.cleaned_data.get('password'))
             if user is not None:
                 login(request, user)
-                return HttpResponseRedirect('/login')
+                return HttpResponseRedirect(self.redirect_after_successful_login)
 
         return render(request, self.template, {'form': self.form})

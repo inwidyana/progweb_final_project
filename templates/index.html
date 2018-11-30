@@ -1,0 +1,38 @@
+{% extends "base/layout.html" %}
+
+{% block content %}
+{% load static %}
+    <div class="bg-lamp" style="height: 91.5vh!important;">
+        <div class="container" style="height: 91.5vh!important;">
+            <div class="row justify-content-center">
+                <div class="col col-auto">
+                    <h3 class="text-white text-uppercase">Hello,</h3>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col col-auto">
+                    <h1 class="text-white text-capitalize">{{ fname }}</h1>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col col-auto">
+                    <h1 class="text-white text-capitalize">{{ lname }}</h1>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col col-auto">
+                    <h4 class="text-white text-capitalize" id="weather"></h4>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col col-auto">
+                    <button class="btn btn-light btn-soft-edges text-capitalize">Search Book</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -11,10 +11,11 @@ from ..forms.RegisterForm import RegisterForm
 class RegisterView(View):
     form = RegisterForm()
     template = 'auth/login.html'
+    redirect_after_successful_registration = '/home/'
 
     def get(self, request):
         if request.user.is_authenticated:
-            return HttpResponseRedirect('/')
+            return HttpResponseRedirect(self.redirect_after_successful_registration)
 
         if request.GET.get('q', '') == 'register':
             return render(request, self.template, {'form': self.form, 'register': True})
@@ -37,6 +38,6 @@ class RegisterView(View):
 
             if user is not None:
                 login(request, user)
-                return HttpResponseRedirect('/')
+                return HttpResponseRedirect(self.redirect_after_successful_registration)
 
         return render(request, self.template, {'form': self.form, 'register': True})
