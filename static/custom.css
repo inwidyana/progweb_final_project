@@ -1,0 +1,96 @@
+/*.body {*/
+    /*background: #000;*/
+/*}*/
+
+/*!*.bg-dark {*!*/
+    /*!*text-transform: uppercase;*!*/
+/*!*}*!*/
+/*.custom-link {*/
+    /*text-transform: uppercase;*/
+    /*border: 1px solid white;*/
+    /*padding-top: 5px;*/
+    /*padding-bottom: 5px;*/
+    /*padding-left: 25px;*/
+    /*padding-right: 25px;*/
+/*}*/
+
+/*.nav-link {*/
+    /*text-transform: uppercase;*/
+    /*text-decoration: underline yellow;*/
+/*}*/
+
+/*.bg-dark {*/
+    /*background: black!important;*/
+/*}*/
+
+/*!*.container-full {*!*/
+    /*!*!*width: 100%!important;*!*!*/
+    /*!*!*height: 100%!important;*!*!*/
+    /*!*padding-top: 5%;*!*/
+    /*!*padding-left: 5%;*!*/
+/*!*}*!*/
+
+/*.img-header {*/
+    /*width: 100%!important;*/
+    /*height: auto!important;*/
+/*}*/
+
+/*.btn-custom {*/
+    /*text-transform: uppercase;*/
+    /*color: white!important;*/
+    /*border-radius: 30px;*/
+    /*padding-left: 50px;*/
+    /*padding-right: 50px;*/
+/*}*/
+
+/*.active {*/
+    /*color: black!important;*/
+/*}*/
+
+/*.login-box {*/
+    /*border: 2px solid black!important;*/
+    /*border-radius: 35px;*/
+/*}*/
+
+/*.login-header {*/
+    /*!*border: 5px solid black!important;*!*/
+    /*!*border-bottom: 5px solid black;*!*/
+    /*!*border-radius: 25px;*!*/
+    /*!*background-color: black;*!*/
+    /*border-bottom: 2px solid black;*/
+    /*!*color: white;*!*/
+    /*text-decoration: underline yellow;*/
+    /*padding: 8px;*/
+/*}*/
+
+/*.col-login {*/
+    /*text-align: center;*/
+/*}*/
+
+/*.form-custom {*/
+    /*border: 2px solid black;*/
+    /*border-radius: 25px;*/
+    /*text-align: center;*/
+/*}*/
+
+/*.btn-rounded {*/
+    /*border-radius: 25px;*/
+/*}*/
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+.btn-light:hover {
+    color: black!important;
+}
+
+.btn-rounded {
+    padding-left: 39px;
+    padding-right: 39px;
+    border-radius: 30px;
+}
