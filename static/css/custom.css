@@ -103,10 +103,17 @@
 
 .bg-dark {
     background: black!important;
+}
+
+.drop-shadow {
     box-shadow: 0 1px 20px 5px white;
 }
 
 .bg-lamp {
-    background: url('bg lights.png');
+    background: url('../bg lights.png');
     background-size: cover;
+}
+
+.input-rounded {
+    border-radius: 45px;
 }

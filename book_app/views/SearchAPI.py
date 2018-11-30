@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.views import View
 
 import urllib.request
@@ -12,6 +12,7 @@ class SearchAPI(View):
         serialized_data = urllib.request.urlopen(url).read()
 
         data = json.loads(serialized_data)
-        html = "<html><body><pre>Data: %s.</pre></body></html>" % json.dumps(data, indent=2)
+        return JsonResponse(data)
+        # html = "<html><body><pre>Data: %s.</pre></body></html>" % json.dumps(data, indent=2)
 
-        return HttpResponse(html)
+        # return HttpResponse(html)

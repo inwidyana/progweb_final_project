@@ -1,10 +1,17 @@
 {% extends "base/layout.html" %}
 
 {% block content %}
-    <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-        <div class="input-group-append">
-            <span class="input-group-text" id="basic-addon2">@example.com</span>
+{% load static %}
+    <div class="bg-dark" style="height: 91.5vh!important;">
+        <div class="container" style="height: 91.5vh!important;">
+            <div class="row justify-content-center">
+                <img class="img-responsive mt-5" width="300px" src="{% static "Logo buku.png" %}">
+            </div>
+            <div class="row justify-content-center">
+                <div class="col col-11">
+                    {% include "component/search_bar.html" %}
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}
